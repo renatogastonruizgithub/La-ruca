@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda+One&family=Open+Sans&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth !important;
+}
+
+
+
+a.nuxt-link-exact-active {
+  background-image: linear-gradient(currentColor, currentColor);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 100% 1px;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+.scrollHtml {
+  overflow-y: hidden;
+  transition: .4s ease-in-out;
+}
+
+.scroll {
+  overflow-y: auto;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+@font-face {
+  font-family: "FontAwesome";
+  font-display: swap;
+  src: url("../fontawesome-free/webfonts/fa-solid-900.woff2") format("woff");
+}
+
+p {
+  font-family: 'Varela Round',
+    sans-serif;
+  margin-top: 4%;
+  margin-bottom: 4%;
+  line-height: 1.6em;
+  text-align: left;
+  font-size: 1em;
+}
+
+h1 {
+  font-family: 'Merienda One',
+    cursive;
+}
+
+.TitulosAndParrafos {
+  margin-bottom: 8%;
+  text-align: center;
+}
+
+:root {
+  --naranja: #f9b001;
+  --verde: #75da8f;
+  --azul: #2aaae2;
+  --rosa: #f86a9a;
+  --titulo: #033b62;
+}
+
+.nosotros {
+  margin-bottom: 10%;
+}
+
+html::-webkit-scrollbar-track {
+  background: #a7a7a796;
+  border-radius: 20px;
+}
+
+/* Cambiamos el fondo cuando esté en active o hover */
+
+html::-webkit-scrollbar-track:active {
+  background: #2aabe294;
+
+}
+
+html::-webkit-scrollbar {
+  height: 9px;
+  width: 14px;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: #949494;
+  border-radius: 20px;
+}
+
+/* Cambiamos el fondo cuando esté en active */
+html::-webkit-scrollbar-thumb:active {
+  background-color: #ffffff;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity .8s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.slide-fade-enter-active {
+  transition: all .3s ease;
+}
+
+.slide-fade-leave-active {
+  transition: all .2s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+
+.slide-fade-enter,
+.slide-fade-leave-to {
+  transform: translateX(10px);
+  opacity: 0;
+}
+
+
+  {
+  /*  padding-top: 130px; */
+}
+
+#acti,
+#talleres {
+  padding-top: 70px;
+}
+
+#nos {
+  padding-top: 5px;
+}
+
+.contenedor-descripcion {
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 9%;
+  overflow-y: scroll;
+}
+
+.contenedor-descripcion p {
+  font-size: 1.1rem;
+}
+
+.contenedor-descripcion h1 {
+  color: var(--titulo);
+}
+
+.image-lazy {
+  opacity: 0;
+  transition: opacity 200ms ease-in;
+}
+
+/* .image-lazy-loading {
+  transform: translateX(100vh);
+
+} */
+
+.image-lazy-loaded {
+  transition: opacity 200ms ease;
+  opacity: 1;
+}
+
+@media only screen and (min-width: 320px) and (max-width:546px) and (orientation: landscape) {
+  p {
+    text-align: left;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    text-align: justify;
+  }
+}
+
+@media only screen and (min-width:1024px) and (max-width: 1140px) {
+  .container-fluid {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.7rem;
+    text-align: justify;
+  }
+}
+
+@media only screen and (min-width: 1140px) and (max-width: 2560px) {
+
+  .container-fluid {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: justify;
+  }
+}
