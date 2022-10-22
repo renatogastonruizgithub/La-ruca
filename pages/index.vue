@@ -35,7 +35,7 @@ import actividades from "../components/actividades.vue";
 import galeria from "../components/galeria.vue";
 export default {
   head: {
-    title: "Jardin impulso waldorf",
+    title: "Irradiando",
     meta: [
       {
         hid: "description",
@@ -81,14 +81,23 @@ export default {
       claseBtn: "btnPrimario",
     };
   },
+
+
   methods: {
     ruta() {
       this.$router.push({
         name: "contacto",
       });
     },
+   
+
   },
+
+
+
 };
+
+
 </script>
 
 <style>

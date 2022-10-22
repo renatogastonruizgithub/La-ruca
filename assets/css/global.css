@@ -147,9 +147,7 @@ html::-webkit-scrollbar-thumb:active {
 }
 
 
-  {
-  /*  padding-top: 130px; */
-}
+
 
 #acti,
 #talleres {
@@ -208,8 +206,8 @@ html::-webkit-scrollbar-thumb:active {
 
 @media only screen and (min-width:1024px) and (max-width: 1140px) {
   .container-fluid {
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding-right: 8rem;
+    padding-left: 8rem;
   }
 
   p {
@@ -222,8 +220,8 @@ html::-webkit-scrollbar-thumb:active {
 @media only screen and (min-width: 1140px) and (max-width: 2560px) {
 
   .container-fluid {
-    padding-right: 2rem;
-    padding-left: 2rem;
+    padding-right: 8rem;
+    padding-left: 8rem;
   }
 
   p {

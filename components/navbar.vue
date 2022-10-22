@@ -424,7 +424,7 @@ export default {
   .navbar,
   .logo,
   .logo img {
-    height: 50px;
+    height: 80px;
   }
   .logo img {
     height: 50px;
