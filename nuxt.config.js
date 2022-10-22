@@ -3,7 +3,7 @@ export default {
     fallback: true
   },  
   sitemap: {
-    hostname: 'https://irradiando.com.ar',
+    hostname: 'https://laruca.com.ar',
     gzip: true,
     exclude: [
       '/secret',
