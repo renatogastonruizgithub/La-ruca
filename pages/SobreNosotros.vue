@@ -2,7 +2,8 @@
   <section>
     <div class="tituloSobre container-fluid">
       <titulo :titulo="tituloCon" />
-      <p>
+      <p v-for="post of posts">
+      {{post.title}}
         Somos un grupo Pedagógico-Artístico comprometidos con la educación de
         l@s niñ@s. Ocupados por la crisis del sistema educativo es justamente
         que nos dedicamos a estudiar diferentes corrientes pedagógicas y poner
@@ -141,7 +142,10 @@
 <script>
 import titulo from "../components/titulos.vue";
 import ImageLazy from "cube-vue-image-lazy";
+import axios from "axios";
 export default {
+ 
+
   head: {
     title: "Sobre Irradiando",
     meta: [
@@ -180,6 +184,7 @@ export default {
     return {
       loading: true,
       loaded: true,
+      posts:[],
       imgSobreNos: [{ url: require("static/img/muralista.jpeg") }],
 
       tituloCon: " Conocé más de nosotr@s",
@@ -191,7 +196,17 @@ export default {
       },
     };
   },
-};
+    created()  {
+        
+    fetch('~/content/about.json')
+    .then((response) => response.json())
+    .then((json) => console.log(json));
+  
+  
+    
+  }
+ 
+}
 </script>
 <style>
 #sobrenosotros {

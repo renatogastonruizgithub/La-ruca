@@ -61,9 +61,12 @@ plugins: [
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    '@nuxt/content'
   ],
-
+  content: {
+    fullTextSearchFields: ['b']
+  },
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {},
 

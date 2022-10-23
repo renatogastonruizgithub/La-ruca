@@ -12,17 +12,36 @@ export const mutations ={
     }
 }
  
-export const actions ={
-async loadPost({commit}){
- 
-       await this.$axios.get("/content/b.json").then((response) => {
+/* export const actions ={
+async loadPost({commit,$content}){
+ const info = await $content("b").fetch(); 
+  commit('setPosts', info) 
+     await queryContent("b").then((response) => {
           commit('setPosts', response.data)
-        
-      })
-  
+        console.log(response)
+      })  
 }
+} */
 
-}
+/* const req = require.context("../sitio/content/", true, /b\.json$/);
+  req.keys().forEach(filename => req(filename)); */
+
+ export const actions = {
+  async loadPost({ commit }) {
+    let files = await require.context(
+      "~/content/",
+      false,
+      /\.json$/
+    );
+
+    files.keys().forEach(filename => info(filename));
+     console.log(files)
+    await commit("setPosts", files);
+  }
+};
+ 
+
+
 
 export const getters={
     getPosts(state){
