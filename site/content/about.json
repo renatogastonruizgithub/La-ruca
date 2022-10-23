@@ -1,0 +1,11 @@
+{
+  "title": "sobre nosotros",
+  "intro": "texto sobre nosotros",
+  "team": [
+    {
+      "name": "titulo 1 slider",
+      "position": "safsaf",
+      "photo": "/galeria/uploads/cocina.jpeg"
+    }
+  ]
+}
