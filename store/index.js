@@ -15,7 +15,7 @@ export const mutations ={
 export const actions ={
 async loadPost({commit}){
  
-       await this.$axios.get("https://proyectoirradiando.000webhostapp.com/wp-json/wp/v2/posts").then((response) => {
+       await this.$axios.get("/content/b.json").then((response) => {
           commit('setPosts', response.data)
         
       })
