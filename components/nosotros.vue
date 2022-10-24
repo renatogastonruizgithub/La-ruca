@@ -50,7 +50,7 @@
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <figcaption v-for="(post, index) in this.$store.state.posts" :key="index" class="texto-articulo">
+          <figcaption  v-for="item in items" class="texto-articulo">
             <titulos id="nos" class="tituloNos" :titulo="titulo"></titulos>
             <p class="parrafo margin-b-medium">
                {{ limpiar(post.content.rendered)  }}</p>
@@ -107,12 +107,15 @@ import btnPry from "~/components/btnPry.vue";
 import titulos from "~/components/titulos.vue";
 import ImageLazy from "cube-vue-image-lazy";
 import { mapState } from "vuex";
+import data from "../content/b.json"
 export default {
   data() {
+  
     return {
       titulo: "Sobre Nosotr@s",
       txtBtn: "Saber mas",
       claseBtn: "btnPrimario",
+      posts:[]
     };
   },
   name: "sectionPresentacion",
@@ -125,8 +128,9 @@ export default {
     ...mapState(["posts"]),
   },
   created() {
-    
-    this.$store.dispatch("loadPost");
+    this.posts=data
+    console.log(this.posts)
+    /* this.$store.dispatch("loadPost"); */
   },
   methods: {
     pageNosotros() {

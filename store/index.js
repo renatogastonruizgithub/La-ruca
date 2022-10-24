@@ -1,3 +1,4 @@
+import data from "../content/b.json"
 
 export const state = () =>({
 posts: [ ]
@@ -12,21 +13,22 @@ export const mutations ={
     }
 }
  
-/* export const actions ={
-async loadPost({commit,$content}){
- const info = await $content("b").fetch(); 
-  commit('setPosts', info) 
-     await queryContent("b").then((response) => {
-          commit('setPosts', response.data)
+ export const actions ={
+async loadPost({commit}){
+ /* const info = await $content("b").fetch();  */
+  commit('setPosts', data) 
+  console.log(data)
+    /*  await queryContent("b").then((response) => {
+          commit('setPosts', data)
         console.log(response)
-      })  
+      })   */
 }
-} */
+} 
 
 /* const req = require.context("../sitio/content/", true, /b\.json$/);
   req.keys().forEach(filename => req(filename)); */
 
- export const actions = {
+ /* export const actions = {
   async loadPost({ commit }) {
     let files = await require.context(
       "~/content/",
@@ -38,7 +40,7 @@ async loadPost({commit,$content}){
      console.log(files)
     await commit("setPosts", files);
   }
-};
+}; */
  
 
 
