@@ -50,10 +50,10 @@
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-          <figcaption v-for="item in items" class="texto-articulo">
+          <figcaption class="texto-articulo">
             <titulos id="nos" class="tituloNos" :titulo="titulo"></titulos>
             <p class="parrafo margin-b-medium">
-              {{ limpiar(post.content.rendered) }}
+              fasdasdasdasdas
             </p>
 
             <div class="items-parrafo">

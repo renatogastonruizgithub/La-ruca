@@ -10,6 +10,41 @@ collections:
   - label: "Secciones"
     name: "Secciones"
     files:
+      - label: "Slider home"
+        name: "slider"
+        file: "/content/slider.json"
+        fields:
+          - label: slider
+            name: slider
+            widget: list
+            fields:
+              - { label: Titulo, name: title, widget: string }
+              - { label: Subtitulo, name: subtitle, widget: string }
+              - { label: Texto boton, name: button, widget: string }
+      - label: "pagina home nostros"
+        name: "home"
+        file: "/content/homeNosotros.json"
+        fields:
+          - { label: titulo sobre nosotros home, name: title, widget: string }
+          - { label: Parrafo, name: intro, widget: markdown }
+          - label: Caracteristicas
+            name: Features
+            widget: list
+            fields:
+              - { label: 1er titulo, name: title, widget: string }
+              - { label: Parrafo, name: intro1, widget: markdown }
+              - { label: 2er titulo, name: title2, widget: string }
+              - { label: Parrafo, name: intro2, widget: markdown }
+              - { label: 3er titulo, name: title3, widget: string }
+              - { label: Parrafo, name: intro3, widget: markdown }
+              - { label: Texto boton, name: button, widget: string }
+          - label: Imagenes
+            name: images
+            widget: list
+            fields:
+              - { label: 1ra Imagen, name: img1, widget: image }
+              - { label: 2ra Imagen, name: img2, widget: image }
+              - { label: 3ra Imagen, name: img3, widget: image }
       - label: "pagina sobre nosotros"
         name: "about"
         file: "/content/about.json"
