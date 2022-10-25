@@ -14,31 +14,42 @@ collections:
         name: "about"
         file: "/content/about.json"
         fields:
-          - {label: titulo sobre nosotros, name: title, widget: string}
-          - {label: 1er parrafo, name: intro, widget: markdown}
+          - { label: titulo sobre nosotros, name: title, widget: string }
+          - { label: 1er parrafo, name: intro, widget: markdown }
           - label: Mision
             name: mision
             widget: list
             fields:
-              - {label: Titulo mision, name: title, widget: string}
-              - {label: Parrafo, name: paragraph, widget: markdown}
-              - {label: Imagen, name: photo, widget: image}
+              - { label: Titulo mision, name: title, widget: string }
+              - { label: Parrafo, name: paragraph, widget: markdown }
+              - { label: Imagen, name: photo, widget: image }
           - label: Vision
             name: vision
             widget: list
             fields:
-              - {label: titulo vision, name: title, widget: string}
-              - {label: parrafo, name: paragraph, widget: markdown}
-              - {label: Imagen, name: photo, widget: image}    
-      - label: "Locations Page"
-        name: "locations"
-        file: "/content/locations.json"
+              - { label: titulo vision, name: title, widget: string }
+              - { label: parrafo, name: paragraph, widget: markdown }
+              - { label: Imagen, name: photo, widget: image }
+      - label: "Pagina contacto"
+        name: "contacto"
+        file: "/content/contacto.json"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Intro, name: intro, widget: markdown}
-          - label: Locations
-            name: locations
-            widget: list
-            fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Address, name: address, widget: string}
+          - { label: Title, name: title, widget: string }
+          - { label: parrafo, name: paragraph, widget: markdown }
+      - label: "Pie de pagina"
+        name: "footer"
+        file: "/content/footer.json"
+        fields:
+          - { label: Nombre logo, name: title, widget: string }
+          - { label: Logo imagen, name: image, widget: image }
+          - { label: Cita, name: cita, widget: string }
+      - label: "Direcciones y redes"
+        name: "direcciones"
+        file: "/content/direcciones.json"
+        fields:
+          - { label: Direccion completa, name: direccion, widget: string }
+          - { label: Correo, name: email, widget: string }
+          - { label: Telefono, name: phone, widget: string }
+          - { label: Horarios y dias, name: days, widget: string }
+          - { label: Url instagram, name: ig, widget: string }
+          - { label: Url facebook, name: face, widget: string }

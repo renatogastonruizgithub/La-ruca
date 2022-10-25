@@ -1,3 +1,18 @@
 {
-    
+  "title": "nosotros",
+  "intro": "p﻿arrafo sobre nostros",
+  "mision": [
+    {
+      "title": "mision",
+      "paragraph": "p﻿arrafos mision",
+      "photo": "/galeria/uploads/cocina.jpeg"
+    }
+  ],
+  "vision": [
+    {
+      "title": "vision",
+      "paragraph": "p﻿arrafo vision",
+      "photo": "/galeria/uploads/circotela.jpeg"
+    }
+  ]
 }

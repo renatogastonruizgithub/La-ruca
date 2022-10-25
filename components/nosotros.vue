@@ -114,8 +114,7 @@ export default {
     return {
       titulo: "Sobre Nosotr@s",
       txtBtn: "Saber mas",
-      claseBtn: "btnPrimario",
-      posts: []
+      claseBtn: "btnPrimario"
     };
   },
   name: "sectionPresentacion",
