@@ -10,6 +10,12 @@ collections:
   - label: "Secciones"
     name: "Secciones"
     files:
+      - label: "logo de la navegacion"
+        name: "navbar"
+        file: "/content/navbar.json"
+        fields:
+          - { label: Nombre logo, name: title, widget: string }
+          - { label: Imagen logo, name: img, widget: image }
       - label: "Slider home"
         name: "slider"
         file: "/content/slider.json"
@@ -31,20 +37,13 @@ collections:
             name: Features
             widget: list
             fields:
-              - { label: 1er titulo, name: title, widget: string }
-              - { label: Parrafo, name: intro1, widget: markdown }
-              - { label: 2er titulo, name: title2, widget: string }
-              - { label: Parrafo, name: intro2, widget: markdown }
-              - { label: 3er titulo, name: title3, widget: string }
-              - { label: Parrafo, name: intro3, widget: markdown }
-              - { label: Texto boton, name: button, widget: string }
+              - { label: titulo, name: title, widget: string }
+              - { label: Parrafo, name: intro, widget: markdown }
           - label: Imagenes
             name: images
             widget: list
             fields:
               - { label: 1ra Imagen, name: img1, widget: image }
-              - { label: 2ra Imagen, name: img2, widget: image }
-              - { label: 3ra Imagen, name: img3, widget: image }
       - label: "pagina sobre nosotros"
         name: "about"
         file: "/content/about.json"
@@ -78,6 +77,12 @@ collections:
           - { label: Nombre logo, name: title, widget: string }
           - { label: Logo imagen, name: image, widget: image }
           - { label: Cita, name: cita, widget: string }
+          - {
+              label: Ministerio,
+              name: ministerio,
+              widget: boolean,
+              default: true,
+            }
       - label: "Direcciones y redes"
         name: "direcciones"
         file: "/content/direcciones.json"
