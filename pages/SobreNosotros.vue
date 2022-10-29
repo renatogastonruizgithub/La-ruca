@@ -9,9 +9,9 @@
 
     <div :style="fondoSobr" class="sobreNosotros">
       <div class="nubeSobre" :style="fondosobre"></div>
-      <section v-for="post in posts" class="container-fluid">
+      <section class="container-fluid">
         <div id="sobrenosotros" class="TitulosAndParrafos">
-          <div class="row esapacioSobre">
+          <div v-for="post in mision" class="row esapacioSobre">
             <div
               class="col-xs-12 col-sm-12 col-md-6 col-lg-6 contenImagenesNos"
             >
@@ -19,7 +19,7 @@
                 <div class="circulo">
                   <ImageLazy
                     class="photo img-responsive"
-                    :src="post.mision[0].photo"
+                    :src="post.photo"
                     baseClass="image-lazy"
                     deferredClass="image-lazy-deferred"
                     loadingClass="image-lazy-loading"
@@ -34,19 +34,20 @@
             </div>
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
               <figcaption class="texto-articulo">
-                <h1>{{ post.mision[0].title }}</h1>
+                <h1>{{ post.title }}</h1>
               </figcaption>
               <p>
-                {{ post.mision[0].paragraph }}
+                {{ post.paragraph }}
               </p>
             </div>
           </div>
-          <div class="row esapacioSobre">
+
+          <div v-for="vision in vision" class="row esapacioSobre">
             <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
               <figcaption class="texto-articulo">
-                <h1>{{ post.vision[0].title }}</h1>
+                <h1>{{ vision.title }}</h1>
               </figcaption>
-              <p class="line">{{ post.vision[0].paragraph }}</p>
+              <p class="line">{{ vision.paragraph }}</p>
             </div>
             <div
               class="col-xs-12 col-sm-12 col-md-6 col-lg-6 contenImagenesNos"
@@ -55,7 +56,7 @@
                 <div class="circulo">
                   <ImageLazy
                     class="photo img-responsive"
-                    :src="post.vision[0].photo"
+                    :src="vision.photo"
                     baseClass="image-lazy"
                     deferredClass="image-lazy-deferred"
                     loadingClass="image-lazy-loading"
@@ -81,13 +82,13 @@ import axios from "axios";
 import data from "../content/about.json";
 export default {
   head: {
-    title: "Sobre Irradiando",
+    title: "Sobre la ruca",
     meta: [
       {
         hid: "description",
         name: "description",
         content:
-          "La misión de Irradiando es el acompañamiento respetuoso y en comunidad de la niñez y juventud, ¡somos guardianes del fueguito interno!"
+          "La misión de la ruca es el acompañamiento respetuoso y en comunidad de la niñez y juventud, ¡somos guardianes del fueguito interno!"
       },
       {
         name: "keywords",
@@ -119,6 +120,8 @@ export default {
       loading: true,
       loaded: true,
       posts: [],
+      mision: [],
+      vision: [],
       imgSobreNos: [{ url: require("static/img/muralista.jpeg") }],
 
       /* tituloCon: " Conocé más de nosotr@s", */
@@ -135,11 +138,9 @@ export default {
     let aux = JSON.stringify(array);
     let parse = JSON.parse(aux);
     this.posts = parse;
-    console.log(this.posts);
-    /*
-    fetch('~/content/about.json')
-    .then((response) => response.json())
-    .then((json) => console.log(json)); */
+    this.mision = data.mision;
+    console.log(data.vision);
+    this.vision = data.vision;
   }
 };
 </script>

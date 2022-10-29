@@ -3,12 +3,15 @@
     <div :style="fondoFooter" class="imgFooter"></div>
     <section class="container-fluid dividerfooer">
       <div class="row">
-        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+        <div
+          v-for="footers in footer"
+          class="col-xs-12 col-sm-6 col-md-4 col-lg-4"
+        >
           <div class="logoFooter">
             <div class="logof">
               <ImageLazy
                 class="photo img-responsive"
-                :src="require('static/img/logo2.png')"
+                :src="footers.image"
                 baseClass="image-lazy"
                 deferredClass="image-lazy-deferred"
                 loadingClass="image-lazy-loading"
@@ -18,13 +21,10 @@
                 @load="loaded = true"
                 alt="taller de arte Irradiando"
               />
-              <h1>Irradiando</h1>
+              <h1>{{ footers.title }}</h1>
             </div>
             <p>
-              "El niño ha de ser recibido con respeto. Educado con amor, puesto
-              en la vida finalmente en libertad."
-              <br />
-              Rudolf Steiner
+              {{ footers.cita }}
             </p>
 
             <p class="separador_social">Comparte nuestra pagina</p>
@@ -50,31 +50,29 @@
           </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-          <div class="contactoFooter">
+          <div v-for="dire in direcciones" class="contactoFooter">
             <ul>
               <li>
-                <i class="fas fa-map-marker-alt"></i>Dr. Ángel Roque Suárez 48,
-                Barrio Alberdi,Córdoba.
+                <i class="fas fa-map-marker-alt"></i>{{ dire.direccion }}
                 <strong @click="toggleModal()">Ver en el mapa</strong>
               </li>
               <li>
-                <i class="fas fa-envelope-open-text"></i
-                >irradiandoelartedeeducar@gmail.com
+                <i class="fas fa-envelope-open-text"> </i>{{ dire.email }}
               </li>
               <li @click="enviarL()">
-                <i class="fab fa-whatsapp-square"></i>351 3462249
-              </li>             
+                <i class="fab fa-whatsapp-square"></i>{{ dire.phone }}
+              </li>
               <li>
-                <i class="fab fa-whatsapp-square"></i>Horarios: 9:00-18:00 hs
-                de lunes a viernes
+                <i class="fab fa-whatsapp-square"></i>Horarios: {{ dire.days }}
               </li>
             </ul>
           </div>
         </div>
         <div
+          v-for="dires in direcciones"
           class="col-xs-12 col-sm-12 col-md-4 col-md-offset-0 col-lg-4 centrar"
         >
-          <div class="links">
+          <div v-if="dires.activado" class="links">
             <ImageLazy
               class="photo img-responsive"
               :src="require('static/img/cultura.jpeg')"
@@ -130,13 +128,14 @@ import ImageLazy from "cube-vue-image-lazy";
 import Modal from "~/components/modal.vue";
 import Instagram from "./slider.vue";
 import Facebook from "./facebook.vue";
-
+import data from "../content/footer.json";
+import Dire from "../content/direcciones.json";
 export default {
   components: {
     Modal,
     ImageLazy,
     Instagram,
-    Facebook,
+    Facebook
   },
   name: "footers",
   data() {
@@ -144,14 +143,22 @@ export default {
       share_open: false,
       mapa: false,
       año: Number,
+      direcciones: [],
+      footer: [],
       fondoFooter: {
-        backgroundImage: `url(${require("@/static/img/footer.png")})`,
-      },
+        backgroundImage: `url(${require("@/static/img/footer.png")})`
+      }
     };
   },
   mounted() {
     const year = new Date().getFullYear();
     this.año = year;
+
+    let array = [{ ...data }];
+    this.footer = array;
+
+    let arrayDire = [{ ...Dire }];
+    this.direcciones = arrayDire;
   },
   methods: {
     toggleModal() {
@@ -170,8 +177,8 @@ export default {
         `https://api.whatsapp.com/send?phone=+543513462249&text=Hola!%20¿como%20estan?%20deseo%20mas%20info%20sobre:`,
         "_blank"
       );
-    },
-  },
+    }
+  }
 };
 </script>
 <style>

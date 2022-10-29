@@ -35,32 +35,32 @@ import actividades from "../components/actividades.vue";
 import galeria from "../components/galeria.vue";
 export default {
   head: {
-    title: "Irradiando",
+    title: "La ruca",
     meta: [
       {
         hid: "description",
         name: "description",
         content:
-          "Actividades holísticas,teatro,cocina, yoga,teniendo como referencia el método Montessori y pedagogía Waldorf ",
+          "Actividades holísticas,teatro,cocina, yoga,teniendo como referencia el método Montessori y pedagogía Waldorf "
       },
       {
         name: "keywords",
         content:
-          "actividad niños 3 años,juegos de motricidad para niños,talleres para niños,taller de arte para niños en cordoba,talleres de manualidades para niños en cordoba,taller cocina infantil,cocina para niños,taller de dibujo y pintura para niños,taller de musica para niños cordoba,taller de arte para niños,talleres, taller de artes plasticas,taller de arte y expresion, taller de pintura cordoba",
+          "actividad niños 3 años,juegos de motricidad para niños,talleres para niños,taller de arte para niños en cordoba,talleres de manualidades para niños en cordoba,taller cocina infantil,cocina para niños,taller de dibujo y pintura para niños,taller de musica para niños cordoba,taller de arte para niños,talleres, taller de artes plasticas,taller de arte y expresion, taller de pintura cordoba"
       },
       {
         name: "google-site-verification",
-        content: "Lp56zDS6CfCh7oOcxXF2InDlnOLH5F0RjVM1Xiej7h8",
+        content: "Lp56zDS6CfCh7oOcxXF2InDlnOLH5F0RjVM1Xiej7h8"
       },
       {
         name: "robots",
-        content: "INDEX,FOLLOW",
+        content: "INDEX,FOLLOW"
       },
       {
         name: "author",
-        content: "Renato ruiz",
-      },
-    ],
+        content: "Renato ruiz"
+      }
+    ]
   },
   components: {
     banner,
@@ -70,7 +70,7 @@ export default {
     titulo,
     talleres,
     BtnPry,
-    Navbar,
+    Navbar
   },
 
   data() {
@@ -78,26 +78,18 @@ export default {
       tituloContacto: "¿Te gustó nuestra propuesta?",
       nameIcon: "fas fa-arrow-right",
       txtBtn: "Contactanos",
-      claseBtn: "btnPrimario",
+      claseBtn: "btnPrimario"
     };
   },
-
 
   methods: {
     ruta() {
       this.$router.push({
-        name: "contacto",
+        name: "contacto"
       });
-    },
-   
-
-  },
-
-
-
+    }
+  }
 };
-
-
 </script>
 
 <style>

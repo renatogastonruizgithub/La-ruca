@@ -1,0 +1,25 @@
+{ "title": "sobre nos",
+  "intro": "s﻿afsafsaf parrafosaf",
+  "Features": [
+    {
+      "title": "caracteristica 1",
+      "intro": "f﻿safasdffdfdfsfd"
+    },
+    {
+      "title": "caracteristica 2",
+      "intro": "s﻿afasfasfsad"
+    }
+  ],
+  "images": [
+    {
+      "img1": "/galeria/uploads/cocina.jpeg"
+    },
+    {
+      "img1": "/galeria/uploads/cocina.jpeg"
+    },
+    {
+      "img1": "/galeria/uploads/cocina.jpeg"
+    }
+  ]
+ 
+}

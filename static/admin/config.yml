@@ -10,6 +10,19 @@ collections:
   - label: "Secciones"
     name: "Secciones"
     files:
+      - label: "Home espacios"
+        name: "espacios"
+        file: "/content/espacios.json"
+        fields:
+          - { label: Titulo, name: title, widget: string }
+          - { label: Parrafo, name: parrafo, widget: string }
+          - label: Los espacios
+            name: space
+            widget: list
+            fields:
+              - { label: titulo, name: title, widget: string }
+              - { label: Descripcion, name: intro, widget: markdown }
+              - { label: Saber mas, name: parrafo, widget: markdown }
       - label: "logo de la navegacion"
         name: "navbar"
         file: "/content/navbar.json"
@@ -93,3 +106,9 @@ collections:
           - { label: Horarios y dias, name: days, widget: string }
           - { label: Url instagram, name: ig, widget: string }
           - { label: Url facebook, name: face, widget: string }
+          - {
+              label: imagen de la derecha,
+              name: activado,
+              widget: boolean,
+              default: true,
+            }

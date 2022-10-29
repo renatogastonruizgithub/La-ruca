@@ -3,39 +3,15 @@
     <div class="container-fluid nosotros">
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 contenImagenes1024">
-          <figure class="contenedor-figure">
-            <div class="img-a">
+          <figure
+            v-for="(item, index) in imagenes"
+            :key="index"
+            class="contenedor-figure"
+          >
+            <div class="img-a" :id="'_' + index">
               <ImageLazy
                 class="photo img-responsive"
-                :src="require('static/img/nos2.jpeg')"
-                baseClass="image-lazy"
-                deferredClass="image-lazy-deferred"
-                loadingClass="image-lazy-loading"
-                loadedClass="image-lazy-loaded"
-                :delay="0"
-                @loading="loading = false"
-                @load="loaded = false"
-                alt=""
-              />
-            </div>
-            <div class="img-b">
-              <ImageLazy
-                class="photo img-responsive"
-                :src="require('static/img/nos1.jpeg')"
-                baseClass="image-lazy"
-                deferredClass="image-lazy-deferred"
-                loadingClass="image-lazy-loading"
-                loadedClass="image-lazy-loaded"
-                :delay="0"
-                @loading="loading = false"
-                @load="loaded = false"
-                alt=""
-              />
-            </div>
-            <div class="img-c">
-              <ImageLazy
-                class="photo img-responsive"
-                :src="require('static/img/nos3.jpeg')"
+                :src="item.img1"
                 baseClass="image-lazy"
                 deferredClass="image-lazy-deferred"
                 loadingClass="image-lazy-loading"
@@ -48,45 +24,25 @@
             </div>
           </figure>
         </div>
-
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
           <figcaption class="texto-articulo">
-            <titulos id="nos" class="tituloNos" :titulo="titulo"></titulos>
-            <p class="parrafo margin-b-medium">
-              fasdasdasdasdas
-            </p>
+            <div v-for="item in data">
+              <titulos
+                id="nos"
+                class="tituloNos"
+                :titulo="item.title"
+              ></titulos>
+              <p class="parrafo margin-b-medium">
+                {{ item.intro }}
+              </p>
+            </div>
 
-            <div class="items-parrafo">
+            <div v-for="items in features" class="items-parrafo">
               <div class="contenItems">
-                <i class="fas fa-star"></i><strong>Espacio</strong>
+                <i class="fas fa-star"></i><strong>{{ items.title }} </strong>
               </div>
               <p>
-                En un espacio Natural de Bioconstrucción y Reciclado. De paredes
-                vivas y de múltiples colores que hacen a la diversidad.
-              </p>
-            </div>
-            <div class="items-parrafo">
-              <div class="contenItems">
-                <i class="fas fa-star"></i><strong>Ludico</strong>
-              </div>
-              <p>
-                Porque todos sus aprendizajes suceden a través del juego, con
-                todo lo que ello implica!! Disfrute, placer, paz interior de
-                estar siendo, contenid@s, escuchad@s y valorad@s. Para así poder
-                jugar con toda seguridad, llevando adelante sus procesos de
-                imitación, repetición y despertar de inteligencias múltiples.
-              </p>
-            </div>
-            <div class="items-parrafo">
-              <div class="contenItems">
-                <i class="fas fa-star"></i><strong>Multidisciplinario</strong>
-              </div>
-              <p>
-                Donde todo puede crearse y reinventarse, guiándonos a través de
-                diferentes disciplinas artísticas como el teatro, yoga, arcilla,
-                circo, telar, pintura muralista, música y cocina y otras que
-                hacen a nuestra autonomía, para ser esta un vehículo hacia
-                nuestras libertades.
+                {{ items.intro }}
               </p>
             </div>
             <div class="boton">
@@ -108,13 +64,16 @@ import btnPry from "~/components/btnPry.vue";
 import titulos from "~/components/titulos.vue";
 import ImageLazy from "cube-vue-image-lazy";
 import { mapState } from "vuex";
-
+import json from "../content/homeNosotros.json";
 export default {
   data() {
     return {
       titulo: "Sobre Nosotr@s",
       txtBtn: "Saber mas",
-      claseBtn: "btnPrimario"
+      claseBtn: "btnPrimario",
+      imagenes: [],
+      features: [],
+      data: []
     };
   },
   name: "sectionPresentacion",
@@ -123,18 +82,19 @@ export default {
     btnPry,
     ImageLazy
   },
-  computed: {
-    ...mapState(["posts"])
+  mounted() {
+    let array = [{ ...json }];
+    this.data = array;
+    this.imagenes = json.images;
+    this.features = json.Features;
+    console.log(this.features);
   },
 
   methods: {
     pageNosotros() {
       this.$router.push({
-        path: "SobreNosotros"
+        name: "SobreNosotros"
       });
-    },
-    limpiar(value) {
-      return value.replace(/<\/?[^>]+(>|$)/g, "");
     }
   }
 };
@@ -147,7 +107,7 @@ export default {
   width: 100%;
   margin-top: 15%;
 }
-.img-a {
+#_0 {
   position: absolute;
   width: 140px;
   height: 140px;
@@ -183,7 +143,7 @@ export default {
   background-color: rgb(128, 128, 128);
 }
 
-.img-b {
+#_1 {
   position: absolute;
   width: 250px;
   height: 250px;
@@ -207,7 +167,7 @@ export default {
   width: 250px;
   height: 250px;
 }
-.img-c {
+#_2 {
   position: absolute;
   width: 110px;
   height: 110px;
