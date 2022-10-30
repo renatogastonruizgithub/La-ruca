@@ -1,22 +1,17 @@
 <template>
   <div id="acti" class="actividades" :style="fondo">
-    <section class="container-fluid">
-      <div class="TitulosAndParrafos">
-        <titulos :titulo="titulo"></titulos>
+    <section v-for="(data,di) in Data" :key="di" class="container-fluid">
+      <div  class="TitulosAndParrafos">
+        <titulos :titulo="data.title"></titulos>
         <p>
-          Cada espacio brinda a l@s niñ@s un acercamiento a las artes, oficios y
-          la posibilidad de desarrollarse como seres humanos, respetando su
-          naturaleza individual y su libertad. Desarrollamos nuestras
-          actividades a través de los cuatro elementos, AGUA, TIERRA, FUEGO y
-          AIRE, con total respeto a las emociones, ritmos e intereses de l@s
-          niñ@s.
+        {{data.parrafo}}
         </p>
       </div>
-      <div class="row contenedorImg">
+      <div  class="row contenedorImg">
         <div class="imgCirculo">
           <ImageLazy
             class="photo img-responsive"
-            :src="require('static/img/propuesta1.jpeg')"
+            :src="data.imagen"
             baseClass="image-lazy"
             deferredClass="image-lazy-deferred"
             loadingClass="image-lazy-loading"
@@ -34,8 +29,8 @@
         >
           <div :id="`color` + (j + 1)" class="nosotrosContenido">
             <div :id="`nosotroText` + (j + 1)" class="nosotroText">
-              <h1>{{ acti.titulo }}</h1>
-              <p>{{ acti.subtit }}</p>
+              <h1>{{ acti.title }}</h1>
+              <p>{{ acti.intro }}</p>
               <btnPry
                 :NameIcono="nameIcon"
                 :icono="true"
@@ -51,8 +46,8 @@
     <modal v-if="open" @closes="saberMas">
       <template slot="contenido">
         <div class="contenedor-descripcion">
-          <h1>{{ selecion.titulo }}</h1>
-          <p>{{ selecion.decript }}</p>
+          <h1>{{ selecion.title }}</h1>
+          <p>{{ selecion.parrafo }}</p>
         </div>
       </template>
     </modal>
@@ -63,6 +58,7 @@ import btnPry from "~/components/btnPry.vue";
 import titulos from "~/components/titulos.vue";
 import modal from "~/components/modal.vue";
 import ImageLazy from "cube-vue-image-lazy";
+import data from "../content/espacios.json";
 export default {
   data() {
     return {
@@ -73,38 +69,14 @@ export default {
       txtBtn: "Saber mas",
       claseBtn: "btnSecundario",
       nameIcon: "fas fa-arrow-right",
+      actividades: [],
+      Data: [],
       selecion: "",
       index: 0,
       fondo: {
-        backgroundImage: `url(${require("@/static/img/nubeazul.jpeg")})`,
-      },
-      actividades: [
-        {
-          titulo: "Aire",
-          subtit: "Espacio de alivio y renovacion de energias",
-          decript:
-            "Permitirles el LIBRE movimiento externo, nos lleva a encontrar nuestro propio equilibrio interno, liberándonos de tensiones y preocupaciones que pueda tener el ser.  Este es un espacio que invita a saltar de colchón en colchón, bailar, atrapar luces, desplazar pelotas, rodar y cualquier actividad física que l@s niñ@s requieran para mover sus energías internas y así renovar el aire, oxigenando todo su cuerpo físico, dando calma y alivio a su ser entero.",
-        },
-        {
-          titulo: "Fuego",
-          subtit:
-            "Espacio dedicado al cultivo de la creatividad a través del trabajo con nuestro cuerpo físico",
-          decript:
-            "La creatividad surge cómo respuesta a un desafío. Es una actitud de descubrimiento interno que implica el desarrollo de la confianza y seguridad en uno mismo. Es convertir al ser pasivo en ser activo, en creador de sí mismo y de la realidad que le rodea. La importancia de la creatividad está en que pueda desarrollar un abanico de posibilidades frente a diversas situaciones, lo que asegura que l@s niñ@s sean más felices, manifiesten una mejor actitud ante situaciones nuevas y se sientan menos frustrados a raíz de un posible cambio.El fuego es la chispa que enciende y hace a la vida, es el calor y la vitalidad, la cual ayudamos a mantener en equilibrio mediante diferentes prácticas como el yoga, acro-yoga, el circo con sus acrobacias en telas, y el teatro.",
-        },
-        {
-          titulo: "Tierra",
-          subtit: "Espacio de laboratorio dedicado al cultivo de los sentidos",
-          decript:
-            "La potencia del aprendizaje por descubrimiento, radica en el contacto directo que l@s niñ@s tienen con el entorno. A través del cultivo de sus sentidos vitales, la experiencia del tacto, el movimiento y el equilibrio, entre otros,  hace al desarrollo sano del ser, favoreciendo las redes y conexiones internas que beneficiarán la óptima maduración biológica. Despertando las ganas de aprender y de explorar, desde la curiosidad ¡base del conocimiento! Facilitando el desarrollo motriz y activando su imaginación a través del juego.El movimiento corporal coordinado y la alegría de descubrir el mundo a través  de los sentidos, es un canal natural durante la primera infancia. Y cuando esta experiencia se da en relación con otros, aparecen nuevas posibilidades de aprendizaje, respecto de sí mismo y los pares: convivir, explorar juntos, arriesgarse y cuidarse mutuamente.Nuestras herramientas para esto son: El trabajo en la huerta, los talleres de cocina, experimentos, el juego libre en la casita refugio, el arenero, el patio al aire libre y todos los tesoros que él contiene.",
-        },
-        {
-          titulo: "Agua",
-          subtit: "Espacio dedicado a la introspección y vuelta a la calma ",
-          decript:
-            "Este espacio busca contener y abrazar al niñ@ en su más profundo sentir. Dejando que sus emociones y sentimientos afloren desde el arte. Nuestras herramientas para esto son:  El dibujo con diferentes elementos en diferentes soportes, la arcilla, el teatro de sombras, el telar y la literatura. ",
-        },
-      ],
+        backgroundImage: `url(${require("@/static/img/nubeazul.jpeg")})`
+      }
+     
     };
   },
   name: "actividades",
@@ -112,15 +84,22 @@ export default {
     ImageLazy,
     titulos,
     btnPry,
-    modal,
+    modal
+  },
+  mounted() {
+    let array = [{ ...data }];
+    this.Data = array;
+    this.actividades = data.space;
+
+   
   },
   methods: {
-    saberMas: function (acti) {
+    saberMas: function(acti) {
       this.selecion = acti;
       this.open = !this.open;
       document.getElementsByTagName("html")[0].classList.add("scrollHtml");
-    },
-  },
+    }
+  }
 };
 </script>
 <style>

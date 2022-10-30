@@ -3,12 +3,12 @@
     <header class="navbar">
       <div class="container-fluid">
         <div class="navbarContenedor">
-          <div @click="index()" class="logo" id="menu">
+          <div  v-for="(data,i) in Data" :key="i" @click="index()" class="logo" id="menu">
             <img
-              :src="require('static/img/logo2.png')"
-              alt="Taller de arte irradiando"
+              :src="data.img"
+              alt="Taller de arte La ruca"
             />
-            <h1>Irradiando</h1>
+            <h1>{{data.title}}</h1>
           </div>
           <div @click="abrirMenu" id="MenuMovil" class="hamburger hamburger3">
             <span class="bar bar1"></span>
@@ -18,7 +18,7 @@
           </div>
           <transition name="fade">
             <nav v-if="menu" class="navegacion">
-              <div v-for="(item, i) in items" :key="i" class="navItem">
+              <div v-for="(item, a) in items" :key="a" class="navItem">
                 <i :class="item.LinkIcono"></i>
                 <nuxt-link
                   @click="abrirMenu"
@@ -35,14 +35,7 @@
                   >
                     <i class="fab fa-instagram" aria-hidden="true"></i>
                   </a>
-                </div>
-                <!--  <div class="social">
-                  <a
-                    target="_blank"
-                    href="https://www.facebook.com/Irradiandoelartedeeducar"
-                    ><i class="fab fa-facebook-f" aria-hidden="true"></i
-                  ></a>
-                </div> -->
+                </div>              
                 <facebook></facebook>
                 <div @click="enviar()" class="social">
                   <i class="fab fa-whatsapp" aria-hidden="true"></i>
@@ -65,6 +58,7 @@
 </template>
 <script>
 import facebook from "./facebook.vue";
+import data from "../content/navbar.json";
 export default {
   components: { facebook },
   name: "navbar",
@@ -72,6 +66,7 @@ export default {
   data() {
     return {
       menu: false,
+      Data:[],
       items: [
         {
           url: "/",
@@ -108,6 +103,10 @@ export default {
         },
       ],
     };
+  },
+   mounted() {
+    let array = [{ ...data }];
+    this.Data = array;   
   },
   methods: {
     abrirMenu() {
