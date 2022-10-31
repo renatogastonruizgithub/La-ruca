@@ -1,14 +1,15 @@
 <template>
-  <div id="talleres" class="container-fluid">
+<div>
+  <div v-for="(item,i) in data" :key="i" id="talleres" class="container-fluid">
     <div class="conten-inscripciones">
       <div class="sombra-inscripciones"></div>
       <div class="conten-inscripciones-titulo">
-        <h1 class="titulo">Inscripciones abiertas</h1>
+        <h1 class="titulo">{{item.inscription}}</h1>
         <btnPry
           :NameIcono="nameIcon"
           :icono="true"
           :clase="claseBtn"
-          :texto="txtIns"
+          :texto="item.button"
           @clicks="rutai()"
         />
       </div>
@@ -29,24 +30,9 @@
     <div class="row">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="TitulosAndParrafos">
-          <titulo :titulo="titulos" />
+          <titulo :titulo="item.title" />
           <p>
-            Las mismas se desarrollan en espacios donde pueden desplazarse con
-            total libertad, desplegando poco a poco su autonomía y
-            autorregulación. Aprendiendo a tomar decisiones, afianzando su
-            seguridad y autoestima. Trabajamos a través de marcados Ritmos de
-            concentración y expansión. Los mismos nos remiten a nuestra propia
-            respiración. Es por esto que nuestras jornadas son orgánicas ! La
-            concentración remite a la inhalación y a toda actividad que requiera
-            nuestra atención bien activa! cómo puede ser pintar, hacer telar,
-            circo, etc.. Al contrario, la expansión hace referencia a la
-            exhalación y toda actividad de juego libre. Nuestro eje de trabajo
-            es el ARTE y la ECOLOGÍA. Entendiendo la misma como el equilibrio
-            necesario en un ambiente de armonía entre todos sus integrantes y
-            componentes en el espacio/tiempo. Desde la satisfacción y el
-            disfrute de diferentes experiencias artísticas como: Musicales,
-            teatrales, circenses, plásticas y otros eventos esporádicos que
-            complementan el desarrollo integral de cada ser.
+        {{item.parrafo}}
           </p>
         </div>
       </div>
@@ -55,7 +41,7 @@
     <article>
       <div class="row">
         <div
-          v-for="(img, i) in imagenes"
+          v-for="(item, i) in cards"
           :key="i"
           class="col-xs-12 col-sm-6 col-md-4 col-lg-4"
         >
@@ -64,49 +50,52 @@
               <div class="border-top"></div>
               <ImageLazy
                 class="photo img-responsive"
-                :src="img.url"
+                :src="item.imagen"
                 baseClass="image-lazy"
                 deferredClass="image-lazy-deferred"
                 loadingClass="image-lazy-loading"
                 loadedClass="image-lazy-loaded"
                 :delay="0"
                 @loading="loading = false"
-                @load="loaded = false"
-                :alt="img.title"
+                @load="loaded = false"                
               />
             </div>
             <div class="textCard">
-              <h1>{{ img.title }}</h1>
+              <h1>{{ item.title }}</h1>
               <p>
-                {{ img.descripcion }}
+                {{ item.intro }}
               </p>
               <btnPry
                 :NameIcono="nameIcon"
                 :icono="true"
                 :clase="claseBtn"
-                :texto="txtBtn"
-                @clicks="leerMas(img)"
+                :texto="item.button"
+                @clicks="leerMas(item)"
               />
             </div>
           </div>
         </div>
       </div>
     </article>
-    <modal v-if="open" @closes="leerMas">
+    
+  </div>
+  <modal v-if="open" @closes="leerMas">
       <template slot="contenido">
         <div class="contenedor-descripcion">
           <h1>{{ selecion.title }}</h1>
-          <p>{{ selecion.descripcion }}</p>
+          <p>{{ selecion.intro }}</p>
         </div>
       </template>
     </modal>
-  </div>
+</div>
+  
 </template>
 <script>
 import titulo from "../components/titulos.vue";
 import btnPry from "~/components/btnPry.vue";
 import Modal from "~/components/modal.vue";
 import ImageLazy from "cube-vue-image-lazy";
+import Data from "../content/actividades.json";
 export default {
   components: {
     ImageLazy,
@@ -126,8 +115,10 @@ export default {
       txtBtn: "Leer mas",
       claseBtn: "btnPrimario",
       index: 0,
+      data:[],
+      cards:[],
       open: false,
-      imagenes: [
+     /*  imagenes: [
         {
           url: require("static/img/yoga.jpeg"),
           title: "Yoga y Acroyoga",
@@ -182,8 +173,13 @@ export default {
           descripcion:
             "El teatro es una las mejores formas de expresión, diversión y desarrollo.  A los niñ@s les gusta, la pasan bien y además favorece a la evolución de cada parte de su cuerpo y mente. Ayuda a los niñ@s en la mejora del lenguaje, de la comprensión y especialmente de la expresión. Amplían su vocabulario; mejora la pronunciación, entonación y vocalización; permite conocer su voz aguda, grave, fuerte y débil. El  teatro impulsa a los niñ@s más tímidos a ir perdiendo poco a poco ese miedo a  relacionarse con los demás o a hablar en público y a aceptarse a sí mismo, por lo  tanto se está propiciando a una buena socialización, autoestima y autonomía personal. Y no solo eso sino que también enfatiza la cooperación y el trabajo en equipo y les hace sentir que forman parte de un grupo de iguales.",
         },
-      ],
+      ], */
     };
+  },
+   mounted() {
+    let array = [{ ...Data }];
+    this.data = array;
+    this.cards = Data.cards;   
   },
   methods: {
     leerMas: function (img) {

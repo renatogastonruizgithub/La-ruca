@@ -90,8 +90,6 @@ export default {
     let array = [{ ...data }];
     this.Data = array;
     this.actividades = data.space;
-
-   
   },
   methods: {
     saberMas: function(acti) {

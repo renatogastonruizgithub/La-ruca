@@ -74,6 +74,13 @@ collections:
               - { label: Contenido, name: intro, widget: markdown }
               - { label: Texto botom, name: button, widget: string }
               - { label: Imagen tarjeta, name: imagen, widget: image }
+      - label: "Home galeria"
+        name: "galeria"
+        file: "/content/galeria.json"
+        widget: list
+        fields:
+          - { label: Imagen, name: url, widget: string }
+          - { label: Miniatura, name: thum, widget: string }
       - label: "pagina sobre nosotros"
         name: "about"
         file: "/content/about.json"
