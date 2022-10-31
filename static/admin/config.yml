@@ -77,10 +77,14 @@ collections:
       - label: "Home galeria"
         name: "galeria"
         file: "/content/galeria.json"
-        widget: list
         fields:
-          - { label: Imagen, name: url, widget: string }
-          - { label: Miniatura, name: thum, widget: string }
+          - { label: Titulo, name: title, widget: string }
+          - label: Imagenes de la galeria
+            name: slides
+            widget: list
+            fields:
+              - { label: Imagen, name: url, widget: string }
+              - { label: Miniatura, name: thum, widget: image }
       - label: "pagina sobre nosotros"
         name: "about"
         file: "/content/about.json"
