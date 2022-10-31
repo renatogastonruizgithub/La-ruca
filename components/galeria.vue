@@ -104,7 +104,8 @@ export default {
   mounted() {
     let array = [{ ...data }];
     this.Data = array;
-    this.slides=data.slides   
+    this.slides=data.slides
+    console.log(this.slides)   
   },
   destroy() {
     document.getElementsByTagName("html")[0].classList.remove("scrollHtml");
