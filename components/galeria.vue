@@ -15,8 +15,9 @@
       />
     </div>
     <section class="geleria container-fluid">
-      <div>
-        <titulo :titulo="tituloss" />
+      <div  v-for="(item, a) in Data"
+            :key="a">
+        <titulo :titulo="item.title" />
       </div>
 
       <div class="conteImagenes">
@@ -30,7 +31,7 @@
             <div class="overlay"><span @click="ver(i)">Ver</span></div>
             <ImageLazy
               class="photo img-responsive"
-              :src="imagens.thum"
+              :src="imagens.url"
               baseClass="image-lazy"
               deferredClass="image-lazy-deferred"
               loadingClass="image-lazy-loading"
@@ -79,7 +80,7 @@
 <script>
 import titulo from "../components/titulos.vue";
 import ImageLazy from "cube-vue-image-lazy";
-import axios from "../node_modules/axios";
+import data from "../content/galeria.json";
 export default {
   name: "galeria",
   components: {
@@ -92,63 +93,19 @@ export default {
       loading: false,
       loaded: false,
       index: 0,
+      slides:[],
+      Data:[],
       abrir: false,
       selecionada: "",
-      tituloss: "Nuestras fotos ",
-      slides: [
-        {
-          url: require("static/galeria/galeria1.jpeg"),
-          thum: require("static/img/thumbail/galeria1.jpeg"),
-        },
-        {
-          url: require("static/galeria/galeria2.jpeg"),
-          thum: require("static/img/thumbail/galeria2.jpeg"),
-        },
-        {
-          url: require("static/galeria/galeria3.jpeg"),
-          thum: require("static/img/thumbail/galeria3.jpeg"),
-        },
-        {
-          url: require("static/galeria/galeria4.jpeg"),
-          thum: require("static/img/thumbail/galeria4.jpeg"),
-        },
-        {
-          url: require("static/galeria/galeria5.jpeg"),
-          thum: require("static/img/thumbail/galeria5.jpeg"),
-        },
-        {
-          url: require("static/galeria/galeria6.jpeg"),
-          thum: require("static/img/thumbail/galeria6.jpeg"),
-        },
-        {
-          url: require("static/galeria/galeria7.jpeg"),
-          thum: require("static/img/thumbail/galeria7.jpeg"),
-        },
-        {
-          url: require("static/galeria/galeria8.jpeg"),
-          thum: require("static/img/thumbail/galeria8.jpeg"),
-        },
-        {
-          url: require("static/galeria/galeria9.jpeg"),
-          thum: require("static/img/thumbail/galeria9.jpeg"),
-        },
-        {
-          url: require("static/galeria/galeria10.jpeg"),
-          thum: require("static/img/thumbail/galeria10.jpeg"),
-        },
-        {
-          url: require("static/galeria/galeria11.jpeg"),
-          thum: require("static/img/thumbail/galeria11.jpeg"),
-        },
-        {
-          url: require("static/galeria/galeria12.jpeg"),
-          thum: require("static/img/thumbail/galeria12.jpeg"),
-        },
-      ],
+      tituloss: "Nuestras fotos ",    
     };
   },
 
-  mounted() {},
+  mounted() {
+    let array = [{ ...data }];
+    this.Data = array;
+    this.slides=data.slides   
+  },
   destroy() {
     document.getElementsByTagName("html")[0].classList.remove("scrollHtml");
   },

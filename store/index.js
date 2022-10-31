@@ -11,17 +11,17 @@ export const mutations = {
   }
 };
 
-export const actions = {
-  async loadPost({ commit }) {
-    /* const info = await $content("b").fetch();  
+/* export const actions = {
+  async loadPost({ commit ,$content}) {
+     const info = await $content("b").fetch();  
     commit("setPosts");
 
    await queryContent("b").then((response) => {
           commit('setPosts', data)
         console.log(response)
-      })   */
+      })   
   }
-};
+}; */
 
 /* const req = require.context("../sitio/content/", true, /b\.json$/);
   req.keys().forEach(filename => req(filename)); */
