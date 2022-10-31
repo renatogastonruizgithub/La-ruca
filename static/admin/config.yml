@@ -83,7 +83,7 @@ collections:
             name: slides
             widget: list
             fields:
-              - { label: Imagen, name: url, widget: string }
+              - { label: Imagen, name: url, widget: image }
               - { label: Miniatura, name: thum, widget: image }
       - label: "pagina sobre nosotros"
         name: "about"
