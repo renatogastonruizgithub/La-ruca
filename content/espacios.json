@@ -1,27 +1,27 @@
 {
-  "title": "s espacios",
-  "parrafo": " de desarrollarse como seres humanos, respetando su naturaleza individual y su libertad. Desarrollamos nuestras actividades a través de los cuatro elementos, AGUA, TIERRA, FUEGO y AIRE, con total respeto a las emociones, ritmos e intereses de l@s niñ@s.",
-  "imagen":"/galeria/uploads/cocina.jpeg",
+  "title": "Nuestros Espacios",
+  "parrafo": "Cada espacio brinda a l@s niñ@s un acercamiento a las artes, oficios y la posibilidad de desarrollarse como seres humanos, respetando su naturaleza individual y su libertad. Desarrollamos nuestras actividades a través de los cuatro elementos,  AGUA, TIERRA, FUEGO y AIRE, con total respeto a las emociones, ritmos e intereses de l@s niñ@s.",
+  "imagen": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/propuesta1.jpeg?alt=media&token=5ba3ae06-23c3-449c-af6a-2948aa00ab78",
   "space": [
     {
       "title": "Aire",
-      "intro": "a﻿sdasdasdasdadasdasdasdadsadsa",
-      "parrafo": "s﻿aber masss"
+      "intro": "ESPACIO DE ALIVIO Y RENOVACION DE ENERGIAS",
+      "parrafo": "Permitirles el LIBRE movimiento externo, nos lleva a encontrar nuestro propio equilibrio interno, liberándonos de tensiones y preocupaciones que pueda tener el ser.  Este es un espacio que invita a saltar de colchón en colchón, bailar, atrapar luces, desplazar pelotas, rodar y cualquier actividad física que l@s niñ@s requieran para mover sus energías internas y así renovar el aire, oxigenando todo su cuerpo físico, dando calma y alivio a su ser entero."
     },
     {
       "title": "fuego",
-      "intro": "s﻿fsafsfafsd",
-      "parrafo": "s﻿ab er mas"
+      "intro": "ESPACIO DEDICADO AL CULTIVO DE LA CREATIVIDAD A TRAVÉS DEL TRABAJO CON NUESTRO CUERPO FÍSICO",
+      "parrafo": "La creatividad surge cómo respuesta a un desafío. Es una actitud de descubrimiento interno que implica el desarrollo de la confianza y seguridad en uno mismo. Es convertir al ser pasivo en ser activo, en creador de sí mismo y de la realidad que le rodea. La importancia de la creatividad está en que pueda desarrollar un abanico de posibilidades frente a diversas situaciones, lo que asegura que l@s niñ@s sean más felices, manifiesten una mejor actitud ante situaciones nuevas y se sientan menos frustrados a raíz de un posible cambio.\nEl fuego es la chispa que enciende y hace a la vida, es el calor y la vitalidad, la cual ayudamos a mantener en equilibrio mediante diferentes prácticas como el yoga, acro-yoga, el circo con sus acrobacias en telas, y el teatro."
     },
     {
       "title": "Tierra",
-      "intro": "a﻿sdasdasd",
-      "parrafo": "s﻿aber mas"
+      "intro": "ESPACIO DE LABORATORIO DEDICADO AL CULTIVO DE LOS SENTIDOS",
+      "parrafo": "La potencia del aprendizaje por descubrimiento, radica en el contacto directo que l@s niñ@s tienen con el entorno. A través del cultivo de sus sentidos vitales, la experiencia del tacto, el movimiento y el equilibrio, entre otros,  hace al desarrollo sano del ser, favoreciendo las redes y conexiones internas que beneficiarán la óptima maduración biológica. Despertando las ganas de aprender y de explorar, desde la curiosidad ¡base del conocimiento! Facilitando el desarrollo motriz y activando su imaginación a través del juego.\nEl movimiento corporal coordinado y la alegría de descubrir el mundo a través  de los sentidos, es un canal natural durante la primera infancia. Y cuando esta experiencia se da en relación con otros, aparecen nuevas posibilidades de aprendizaje, respecto de sí mismo y los pares: convivir, explorar juntos, arriesgarse y cuidarse mutuamente.\nNuestras herramientas para esto son: El trabajo en la huerta, los talleres de cocina, experimentos, el juego libre en la casita refugio, el arenero, el patio al aire libre y todos los tesoros que él contiene."
     },
     {
       "title": "Agua",
-      "intro": "a﻿sdasdas",
-      "parrafo": "a﻿dasdasdasd"
+      "intro": "ESPACIO DEDICADO A LA INTROSPECCIÓN Y VUELTA A LA CALMA",
+      "parrafo": "Este espacio busca contener y abrazar al niñ@ en su más profundo sentir. Dejando que sus emociones y sentimientos afloren desde el arte. Nuestras herramientas para esto son:  El dibujo con diferentes elementos en diferentes soportes, la arcilla, el teatro de sombras, el telar y la literatura."
     }
   ]
 }
