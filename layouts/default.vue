@@ -4,12 +4,12 @@
     <navbar />
     <div class="contenSocialEscritorio">
       <div v-on:scroll="btnScroll" class="socialIconsEscritorio">
-        <div class="socialE">
-          <a target="_blank" href="https://www.instagram.com/Irradiando20/">
+        <div v-for="(item,i) in dire" :key="i" class="socialE">
+          <a target="_blank" href="https://www.instagram.com/larucapewen/">
             <i class="fab fa-instagram I" aria-hidden="true"></i>
           </a>
         </div>
-        <div @click="compartir()" id="socialFace" class="socialE">
+        <!-- <div @click="compartir()" id="socialFace" class="socialE">
           <span v-if="share_open" class="tooltiptext">
             <iframe
               src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.facebook.com%2FIrradiandoelartedeeducar&layout=button_count&size=small&width=111&height=20&appId"
@@ -27,8 +27,8 @@
               >visitanos</a
             >
           </span>
-          <a><i class="fab fa-facebook-f F" aria-hidden="true"></i></a>
-        </div>
+          <a><i class="fab fa-facebook-f F" aria-hidden="true"></i></a> 
+        </div>-->
         <div @click="enviarb()" class="socialE">
           <i class="fab fa-whatsapp W" aria-hidden="true"></i>
         </div>
@@ -42,6 +42,7 @@
 import navbar from "../components/navbar.vue";
 import footers from "../components/footers.vue";
 import loading from "../components/loading.vue";
+import data from "../content/direcciones.json";
 export default {
   components: {
     navbar,
@@ -52,7 +53,12 @@ export default {
     return {
       timerf: null,
       share_open: false,
+      dire:[]
     };
+  },
+  mounted() {
+    let array = [{ ...data }];
+    this.dire = array;
   },
   methods: {
     btnScroll: function (event) {
@@ -73,16 +79,16 @@ export default {
     },
     enviarb() {
       window.open(
-        `https://api.whatsapp.com/send?text=https://www.irradiando.com.ar`,
+        `https://api.whatsapp.com/send?text=https://www.laruca.com.ar`,
         "_blank"
       );
     },
-    compartir() {
+   /*  compartir() {
       this.share_open = !this.share_open;
       this.timerf = setTimeout(() => {
         this.share_open = false;
       }, 3000);
-    },
+    }, */
   },
 
   mounted: function () {

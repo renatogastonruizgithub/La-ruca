@@ -27,7 +27,6 @@ collections:
             fields:
               - { label: Titulo, name: title, widget: string }
               - { label: Subtitulo, name: subtitle, widget: string }
-              - { label: Texto boton, name: button, widget: string }
       - label: "pagina home nostros"
         name: "home"
         file: "/content/homeNosotros.json"

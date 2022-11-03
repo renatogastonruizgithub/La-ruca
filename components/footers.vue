@@ -4,7 +4,7 @@
     <section class="container-fluid dividerfooer">
       <div class="row">
         <div
-          v-for="footers in footer"
+          v-for="footers,a in footer" :key="a"
           class="col-xs-12 col-sm-6 col-md-4 col-lg-4"
         >
           <div class="logoFooter">
@@ -32,16 +32,16 @@
               <div class="socialfooter" id="instagram">
                 <a
                   target="_blank"
-                  href="https://www.instagram.com/Irradiando20/"
+                  href="https://www.instagram.com/larucapewen/"
                 >
                   <i class="fab fa-instagram" aria-hidden="true"></i>
                 </a>
               </div>
-              <facebook></facebook>
+             <!--  <facebook></facebook> -->
               <div id="whatsapp" class="socialfooter">
                 <a
                   target="_blank"
-                  href="https://api.whatsapp.com/send?text=https://www.irradiando.com.ar"
+                  href="https://api.whatsapp.com/send?text=https://www.laruca.com.ar"
                 >
                   <i class="fab fa-whatsapp" aria-hidden="true"></i
                 ></a>
@@ -50,7 +50,7 @@
           </div>
         </div>
         <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-          <div v-for="dire in direcciones" class="contactoFooter">
+          <div v-for="dire,t in direcciones" :key="t" class="contactoFooter">
             <ul>
               <li>
                 <i class="fas fa-map-marker-alt"></i>{{ dire.direccion }}
@@ -69,7 +69,7 @@
           </div>
         </div>
         <div
-          v-for="dires in direcciones"
+          v-for="dires,q in direcciones" :key="q"
           class="col-xs-12 col-sm-12 col-md-4 col-md-offset-0 col-lg-4 centrar"
         >
           <div v-if="dires.activado" class="links">

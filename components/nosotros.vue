@@ -26,7 +26,7 @@
         </div>
         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
           <figcaption class="texto-articulo">
-            <div v-for="item in data">
+            <div v-for="item,a in data" :key="a">
               <titulos
                 id="nos"
                 class="tituloNos"
@@ -37,7 +37,7 @@
               </p>
             </div>
 
-            <div v-for="items in features" class="items-parrafo">
+            <div v-for="(items,i ) in features"  :key="i" class="items-parrafo">
               <div class="contenItems">
                 <i class="fas fa-star"></i><strong>{{ items.title }} </strong>
               </div>
@@ -102,10 +102,10 @@ export default {
 <style>
 .contenedor-figure {
   position: relative;
-  overflow: hidden;
-  height: 450px;
+  /* overflow: hidden; */
+  height: 200px;
   width: 100%;
-  margin-top: 15%;
+  /* margin-top: 15%; */
 }
 #_0 {
   position: absolute;
@@ -126,7 +126,7 @@ export default {
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-.img-a img {
+.img-a ,#_0 img {
   width: 140px;
   height: 140px;
 }
@@ -149,7 +149,7 @@ export default {
   height: 250px;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  transform: translate(0%, 40%);
+  transform: translate(0%, -40%);
   z-index: 2;
   padding: 5px;
   background: #f8f8f8;
@@ -163,7 +163,8 @@ export default {
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-.img-b img {
+.img-b ,
+#_1 img {
   width: 250px;
   height: 250px;
 }
@@ -173,7 +174,7 @@ export default {
   height: 110px;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
-  transform: translate(30%, 260%);
+  transform: translate(30%, -60%);
   z-index: 3;
   padding: 5px;
   background: #f8f8f8;
@@ -187,7 +188,8 @@ export default {
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
-.img-c img {
+.img-c ,
+#_2 img {
   width: 110px;
   height: 110px;
 }
@@ -247,26 +249,26 @@ export default {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 546px) and (orientation: landscape) {
-  .img-a {
+ /*  #_0 {
     transform: translate(-90%, 1%);
   }
-  .img-a img {
-  }
-  .img-b {
+  .img-a,#_0 img {
+  } */
+  #_0 {
     width: 290px;
     height: 290px;
     transform: translate(0%, 20%);
   }
-  .img-b img {
+  .img-b,#_0 img {
     width: 290px;
     height: 290px;
   }
-  .img-c {
+  #_1 {
     width: 180px;
     height: 180px;
     transform: translate(70%, 120%);
   }
-  .img-c img {
+  .img-c,#_1 img {
     width: 180px;
     height: 180px;
   }
@@ -278,35 +280,36 @@ export default {
   }
 
   .contenedor-figure {
-    margin-top: 1%;
+    padding-top: 10%;
+    height: 80px;
   }
-  .img-a {
+  #_0 {
     width: 180px;
     height: 180px;
     padding: 6px;
-    transform: translate(-100%, 110%);
+    transform: translate(-100%, 10%);
   }
-  .img-a img {
+  .img-a,#_0 img {
     width: 180px;
     height: 180px;
   }
-  .img-b {
+  #_1 {
     width: 290px;
     height: 290px;
     padding: 6px;
-    transform: translate(0%, 20%);
+    transform: translate(0%, -50%);
   }
-  .img-b img {
+  .img-b,#_1 img {
     width: 290px;
     height: 290px;
   }
-  .img-c {
+  #_2 {
     width: 200px;
     height: 200px;
     padding: 6px;
-    transform: translate(90%, 95%);
+    transform: translate(90%, -95%);
   }
-  .img-c img {
+  .img-c,#_2 img {
     width: 200px;
     height: 200px;
   }
@@ -335,35 +338,35 @@ export default {
     margin-bottom: 8%;
   }
 
-  .img-a {
-    width: 180px;
-    height: 180px;
+  #_0 {
+    width: 120px;
+    height: 120px;
     padding: 6px;
-    transform: translate(-65%, 110%);
+    transform: translate(25%, 110%);
   }
-  .img-a img {
-    width: 180px;
-    height: 180px;
+  .img-a ,#_0 img {
+    width: 120px;
+    height: 120px;
   }
-  .img-b {
-    width: 290px;
-    height: 290px;
+  #_1 {
+    width: 190px;
+    height: 190px;
     padding: 6px;
     transform: translate(0%, 20%);
   }
-  .img-b img {
-    width: 290px;
-    height: 290px;
-  }
-  .img-c {
+  .img-b,#_1 img {
     width: 190px;
     height: 190px;
+  }
+  #_2 {
+    width: 140px;
+    height: 140px;
     padding: 6px;
-    transform: translate(60%, 100%);
+    transform: translate(-20%, 100%);
   }
-  .img-c img {
-    width: 190px;
-    height: 190px;
+  .img-c,#_2 img {
+    width: 140px;
+      height: 140px;
   }
 }
 @media only screen and (min-width: 1140px) and (max-width: 2560px) {
@@ -389,34 +392,35 @@ export default {
     margin-bottom: 8%;
   }
 
-  .img-a {
+  #_0  {
     width: 180px;
     height: 180px;
     padding: 6px;
-    transform: translate(-95%, 110%);
+    transform: translate(35%, 90%);
   }
-  .img-a img {
+  .img-a ,#_0 img {
     width: 180px;
     height: 180px;
   }
-  .img-b {
-    width: 320px;
-    height: 320px;
+  #_1 {
+    width: 250px;
+      height: 250px;
     transform: translate(0%, 20%);
     padding: 6px;
     border: #43cd66 dashed 3px;
   }
-  .img-b img {
-    width: 320px;
-    height: 320px;
+  .img-b,#_1 img {
+    width: 250px;
+    height: 250px;
   }
-  .img-c {
+  #_2 {
     width: 190px;
     height: 190px;
     padding: 6px;
-    transform: translate(90%, 100%);
+    transform: translate(-5%, 20%);
+    
   }
-  .img-c img {
+  .img-c, #_2 img {
     width: 190px;
     height: 190px;
   }

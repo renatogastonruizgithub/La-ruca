@@ -31,12 +31,12 @@
                 <div class="social">
                   <a
                     target="_blank"
-                    href="https://www.instagram.com/Irradiando20/"
+                    href="https://www.instagram.com/larucapewen/"
                   >
                     <i class="fab fa-instagram" aria-hidden="true"></i>
                   </a>
                 </div>              
-                <facebook></facebook>
+               <!--  <facebook></facebook> -->
                 <div @click="enviar()" class="social">
                   <i class="fab fa-whatsapp" aria-hidden="true"></i>
                 </div>

@@ -1,12 +1,10 @@
 <template>
   <div :style="fondoCon" class="contacto">
     <section class="container-fluid">
-      <div class="TitulosAndParrafos tituloContacto">
-        <titulo :titulo="tituloCon" />
+      <div v-for="(item,i) in contacto" :key="i" class="TitulosAndParrafos tituloContacto">
+        <titulo :titulo="item.title" />
         <p>
-          Si querés saber más de nosotr@s, completá todos los datos del
-          formulario, te responderemos de lunes a viernes de 9 a 18hs y
-          coordinaremos una entrevista.
+          {{ item.paragraph }}
         </p>
       </div>
       <section class="dividerFooter">
@@ -97,7 +95,7 @@
 <script>
 import titulo from "../components/titulos.vue";
 import btnPry from "../components/btnPry.vue";
-
+import data from "../content/contacto.json";
 export default {
   head: {
     title: "Contactanos",
@@ -138,6 +136,7 @@ export default {
       nombre: "",
       edad: "",
       mensaje: "",
+      contacto:[],
       error: [],
       isError: false,
       patternName: /^[A-Z\s\n\r]+$/i,
@@ -167,7 +166,13 @@ export default {
       this.validarMensaje(value);
     },
   },
-
+  mounted() {
+    let array = [{ ...data }];
+    let aux = JSON.stringify(array);
+    let parse = JSON.parse(aux);
+    this.contacto = parse;
+ 
+  },
   methods: {
     sendWhatsapp: function (event) {
       if (!this.mensaje) {
