@@ -2,22 +2,34 @@
   "title": "nuestra imagenes",
   "slides": [
     {
-      "url": "/galeria/uploads/logoRuca.jpeg"
+      "url": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/agaleria1.jpeg?alt=media&token=dea94ce4-178a-4fda-b9a1-8760a7e39fbd"
     },
     {
-      "url": "/galeria/uploads/cocina.jpeg"
+      "url": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/agaleria2.jpeg?alt=media&token=9ab2b2c4-a8e8-4a65-950c-fd428a47a726"
     },
     {
-      "url": "/galeria/uploads/galeria1.jpeg"
+      "url": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/agaleria3.jpeg?alt=media&token=d3b7319d-39e1-4549-b9ac-7765ed12c319"
     },
     {
-      "url": "/galeria/uploads/galeria10.jpeg"
+      "url": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/agaleria4.jpeg?alt=media&token=dac5b291-3fdc-4c93-bffb-799a5bb67e93"
     },
     {
-      "url": "/galeria/uploads/galeria13.jpeg"
+      "url": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/agaleria5.jpeg?alt=media&token=0cd70512-ad33-4732-993c-04b67691ce18"
     },
     {
-      "url": "/galeria/uploads/cocina.jpeg"
+      "url": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/agaleria6.jpeg?alt=media&token=8b10a401-6caf-450a-a076-6bb090cd7b4d"
+    },
+    {
+      "url": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/agaleria7.jpeg?alt=media&token=68825dbe-fc31-42b0-bb33-e5a5fd48a1c0"
+    },
+    {
+      "url": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/agaleria8.jpeg?alt=media&token=6bc22a45-33c3-4030-a0d2-8c6a9fc428b4"
+    },
+    {
+      "url": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/agaleria9.jpeg?alt=media&token=996e16c9-bc4d-4d46-b3f4-3bcc80df792a"
+    },
+    {
+      "url": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/agaleria10.jpeg?alt=media&token=4da09fcd-eade-49a7-8f41-fb2d542e5941"
     }
   ]
 }
