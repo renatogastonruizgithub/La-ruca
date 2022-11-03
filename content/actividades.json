@@ -45,6 +45,24 @@
       "intro": "El arte muralista favorece la apreciación, expresión y representación de sentires y pensares. A través de la expresión de emociones, recuerdos, percepciones y sensaciones. Así, las expresiones visuales y plásticas se convierten en un lenguaje del sentir de las niñ@s. En la Ruca el muralismo hace a la libertad de expresión, propiciando que tengan la experiencia de pasar con un pincel sobre un muro o pared, es una experiencia de completa libertad, apertura, amplitud y diversión de llenar de colores y trazos. Para esto ellos cuentan con una pared especifica en el espacio, donde pueden explayarse.",
       "button": "Saber mas",
       "imagen": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/muralista.jpeg?alt=media&token=256db5ea-95b4-4657-aedd-1371f5704aa1"
+    },
+    {
+      "title": "Taller de Cocina",
+      "intro": "Los talleres de cocina proponen actividades de experimentación, divertidas y seguras. Este taller es uno de los más completos, ya que a través del mismo, podemos compartir ritmo al batir, experimentar con nuestros sentidos, los aromas, las texturas, la observación de cambios en la materia, el gusto.. acercarnos a las ciencias naturales mediante la recolección de alimentos de la huerta, a las ciencias  sociales mediante las comidas típicas, la lecto escritura en el procedimiento de preparación y matemática en las cantidades ¡Todo en una sola receta! \n Sin importar el conocimiento previo que tengan de cocina, los niñ@s disfrutan de una alimentación sana, variada y equilibrada. Además, hacen recetas tan fáciles que luego pueden repetirlas en casa. En conjunto con el Almacén Saludable que es un espacio de aprendizaje que involucra la colaboración de todas las familias del espacio, que proporciona una dosis segura de muchos nutrientes importantes en los primeros años de vida de los niñ@s.",
+      "button": "Saber mas",
+      "imagen": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/cocina.jpeg?alt=media&token=5213fd15-1595-473a-83a1-c46525e60d13"
+    },
+    {
+      "title": "Telar",
+      "intro": "La práctica de las manualidades y labores como el telar no tiene la intención de ofrecer sólo un pasatiempo agradable,  contribuye al pensamiento ágil y favorece la atención plena. Es una forma ancestral de meditación, de volcar allí nuestros sentires y pensares. De intencionar un deseo, de transmutar nuestra energía.",
+      "button": "Saber mas",
+      "imagen": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/telar.jpeg?alt=media&token=2784e59d-11c5-4aba-8372-ce0c01c59ede"
+    },
+    {
+      "title": "Arte",
+      "intro": "El arte constituye una posibilidad tangible que permite dar forma a lo intangible, a lo que se siente, se piensa, se imagina e incluso a lo que se teme, ya que al pintar, modelar o dibujar emergen ideas, sentimientos e imágenes, las cuales contribuyen a la creación de mundos posibles y personajes salidos de la fantasía y de la imaginación de las niñ@s",
+      "imagen": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/arte.jpeg?alt=media&token=54904ca9-137b-4ca9-9669-4069ae67ca79",
+      "button": "Saber mas"
     }
   ]
 }
