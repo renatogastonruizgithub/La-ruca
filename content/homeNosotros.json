@@ -1,25 +1,29 @@
 {
-  "title": "sobre nos",
-  "intro": "s﻿afsafsaf parrafosaf",
+  "title": "Sobre Nosotr@s",
+  "intro": "\"La Ruca\" nace con la intención de compartir e irradiar un espacio armónico, integral, no autoritario, democratico, amoroso, respetando los tiempos, ritmos  y sobre todo dando respuestas significativas a las necesidades de los niñ@s.",
   "Features": [
     {
-      "title": "caracteristica 1",
-      "intro": "f﻿safasdffdfdfsfd"
+      "title": "Espacio",
+      "intro": "En un espacio Natural de Bioconstrucción y Reciclado. De paredes vivas y de múltiples colores que hacen a la diversidad."
     },
     {
-      "title": "caracteristica 2",
-      "intro": "s﻿afasfasfsad"
+      "title": "Ludico",
+      "intro": "Porque todos sus aprendizajes suceden a través del juego, con todo lo que ello implica!! Disfrute, placer, paz interior de estar siendo, contenid@s, escuchad@s y valorad@s.  Para así poder  jugar con toda seguridad, llevando adelante sus procesos de imitación, repetición y despertar de inteligencias múltiples."
+    },
+    {
+      "intro": "Donde todo puede crearse y reinventarse, guiándonos a través de diferentes disciplinas artísticas como el teatro, yoga, arcilla, circo, telar, pintura muralista, música y cocina y otras que hacen a nuestra autonomía, para ser esta un vehículo hacia nuestras libertades.",
+      "title": "Multidisciplinario"
     }
   ],
   "images": [
     {
-      "img1": "https://firebasestorage.googleapis.com/v0/b/portafolio-ecd13.appspot.com/o/irradiando.png?alt=media&token=a5b0cb60-6674-456e-b0cf-17bc9820705e"
+      "img1": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/nos1.jpeg?alt=media&token=a48f2f5f-0f4b-4ee6-b236-cbc82723f1cd"
     },
     {
-      "img1": "/galeria/uploads/cocina.jpeg"
+      "img1": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/nos2.jpeg?alt=media&token=6636452f-b790-4fae-b19d-98813bc44310"
     },
     {
-      "img1": "/galeria/uploads/cocina.jpeg"
+      "img1": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/nos3.jpeg?alt=media&token=2ba336e0-3242-41fb-a046-e02e54795ed9"
     }
   ]
 }
