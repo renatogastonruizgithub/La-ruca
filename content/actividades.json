@@ -11,10 +11,40 @@
       "imagen": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/yoga.jpeg?alt=media&token=f37c9970-2d5a-46ac-8bd6-4c6d1142e9eb"
     },
     {
-      "title": "circo",
-      "intro": "a﻿sfsafasf",
+      "title": "Música",
+      "intro": "El ritmo es el elemento que nos brinda seguridad para nuestro desarrollo. A su vez,  la música incide con muchísima fuerza en la sensibilidad infantil y es a través del movimiento cómo el niñ@ lo percibe. Las canciones motrices y rimas con dedos, constituyen el medio a través del cual se sintetizan las dos áreas de conocimiento, la educación física y musical.",
       "button": "saber mas",
-      "imagen": "/galeria/uploads/galeria2.jpeg"
+      "imagen": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/nos3.jpeg?alt=media&token=08038039-2770-4858-b0ff-d32c7b490442"
+    },
+    {
+      "title": "Teatro",
+      "intro": "El teatro es una las mejores formas de expresión, diversión y desarrollo.  A los niñ@s les gusta, la pasan bien y además favorece a la evolución de cada parte de su cuerpo y mente. Ayuda a los niñ@s en la mejora del lenguaje, de la comprensión y especialmente de la expresión. Amplían su vocabulario; mejora la pronunciación, entonación y vocalización; permite conocer su voz aguda, grave, fuerte y débil. El  teatro impulsa a los niñ@s más tímidos a ir perdiendo poco a poco ese miedo a  relacionarse con los demás o a hablar en público y a aceptarse a sí mismo, por lo  tanto se está propiciando a una buena socialización, autoestima y autonomía personal. Y no solo eso sino que también enfatiza la cooperación y el trabajo en equipo y les hace sentir que forman parte de un grupo de iguales.",
+      "button": "saber mas",
+      "imagen": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/teatro.jpeg?alt=media&token=2343c28b-b19f-4bd8-8907-68de0b1686bc"
+    },
+    {
+      "title": "Circo , Tela",
+      "intro": "Las diferentes prácticas circenses propician el desarrollo de las capacidades psicomotrices, la creatividad y la expresión. Los personajes, la escenografía, la emoción de las acrobacias y los juegos de malabares resultan claros incentivos para el desarrollo del juego el cual será la clave para aprender y estimular el desarrollo físico, intelectual y sensorial de los niñ@s. Para el desarrollo holístico de cada ser , creemos fundamental trabajar la mente, el corazón y lo físico. La disciplina circense es una disciplina que trabaja todas las partes del cuerpo y a su vez es un ejercicio de neuroplasticidad ya que trabaja ambos hemisferios cerebrales, de una forma divertida, lúdica, llena de colores, para ser tomada con alegría y así crecer jugando.",
+      "button": "Saber mas",
+      "imagen": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/circo.jpeg?alt=media&token=21c162f1-ac9c-4cac-b445-30e416d9fafa"
+    },
+    {
+      "title": " Yoga y acroyoga ",
+      "intro": "Al hacer yoga, los niñ@s adquieren conciencia de su propio cuerpo, aprenden a reconocer cada una de sus partes y a adoptar buenas posturas, además, fortalecen los músculos y adquieren flexibilidad, logran concentrarse mejor y eliminar el estrés. Fomenta el compañerismo, la amistad y el respeto hacia el medio ambiente. Gracias a pintar mandalas y los ejercicios de respiración consiguen relajar la mente y volver a la calma.",
+      "button": "Saber mas",
+      "imagen": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/yoga.jpeg?alt=media&token=f37c9970-2d5a-46ac-8bd6-4c6d1142e9eb"
+    },
+    {
+      "title": "Arcilla",
+      "intro": "El juego con arcilla aporta diferentes beneficios para el sistema sensorial de nuestros niñ@s y mejora la motricidad fina en las manos. El hecho de sentir texturas ya sean frías, pesadas, resbalosas, con diferentes olores y colores que se forman de diferentes maneras en sus manos y que responden a su manipulación. Es muy importante darles a los niñ@s la libertad de trabajar con los materiales, dejarles ensuciarse, mojarse y explorarlos.",
+      "imagen": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/arcilla.jpeg?alt=media&token=b0018650-9cfb-46cd-a958-728fbb8d3ba2",
+      "button": "Saber mas"
+    },
+    {
+      "title": "Pintura Muralista",
+      "intro": "El arte muralista favorece la apreciación, expresión y representación de sentires y pensares. A través de la expresión de emociones, recuerdos, percepciones y sensaciones. Así, las expresiones visuales y plásticas se convierten en un lenguaje del sentir de las niñ@s. En la Ruca el muralismo hace a la libertad de expresión, propiciando que tengan la experiencia de pasar con un pincel sobre un muro o pared, es una experiencia de completa libertad, apertura, amplitud y diversión de llenar de colores y trazos. Para esto ellos cuentan con una pared especifica en el espacio, donde pueden explayarse.",
+      "button": "Saber mas",
+      "imagen": "https://firebasestorage.googleapis.com/v0/b/la-rauca.appspot.com/o/muralista.jpeg?alt=media&token=256db5ea-95b4-4657-aedd-1371f5704aa1"
     }
   ]
 }
