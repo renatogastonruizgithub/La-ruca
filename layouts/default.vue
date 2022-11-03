@@ -4,14 +4,14 @@
     <navbar />
     <div class="contenSocialEscritorio">
       <div v-on:scroll="btnScroll" class="socialIconsEscritorio">
-        <div v-for="(item,i) in dire" :key="i" class="socialE">
+        <div  class="socialE">
           <a target="_blank" href="https://www.instagram.com/larucapewen/">
             <i class="fab fa-instagram I" aria-hidden="true"></i>
           </a>
         </div>
-        <!-- <div @click="compartir()" id="socialFace" class="socialE">
+       <!--  <div @click="compartir()" id="socialFace" class="socialE">
           <span v-if="share_open" class="tooltiptext">
-            <iframe
+          <iframe
               src="https://www.facebook.com/plugins/share_button.php?href=https%3A%2F%2Fwww.facebook.com%2FIrradiandoelartedeeducar&layout=button_count&size=small&width=111&height=20&appId"
               width="111"
               height="20"
@@ -20,7 +20,7 @@
               frameborder="0"
               allowfullscreen="true"
               allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-            ></iframe>
+            ></iframe> 
             <a
               target="_blank"
               href="https://www.facebook.com/Irradiandoelartedeeducar"
