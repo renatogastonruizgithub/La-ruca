@@ -1,6 +1,6 @@
 <template>
   <div :style="fondoCon" class="contacto">
-    <section class="container-fluid">
+    <section  class="container-fluid">
       <div v-for="(item,i) in contacto" :key="i" class="TitulosAndParrafos tituloContacto">
         <titulo :titulo="item.title" />
         <p>
@@ -143,7 +143,7 @@ export default {
       patternEdad: /^[0-9]+$/i,
       tituloCon: "Contacto rapido",
       fondoCon: {
-        backgroundImage: `url(${require("static/img/contacto.jpeg")})`,
+        backgroundImage: `url(${require("static/img/fondoContacto.jpeg")})`,
       },
       txtBtn: "Enviar por WhatsApp",
       claseBtn: "btnPrimario",
@@ -243,8 +243,8 @@ export default {
   margin-top: 90px;
 }
 .contacto {
-  background-color: #ceeefa;
-  background-size: contain;
+  
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   padding-bottom: 5%;
@@ -264,7 +264,7 @@ export default {
   margin-left: auto;
   margin-right: auto;
   padding: 10px;
-  background-color: #ffffff57;
+  background-color: #fce8f3;
   border-radius: 10px;
 }
 .botonesEnvio {

@@ -136,7 +136,7 @@ export default {
   display: flex;
   flex-grow: 1;
   align-items: center;
-  color: #263c8d;
+  color: #4b1e35;
   cursor: pointer;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }

@@ -117,7 +117,7 @@ export default {
   z-index: 1;
   padding: 5px;
   background: #f8f8f8;
-  border: #f9b001 dashed 2px;
+  border: var(--naranja) dashed 2px;
   overflow: hidden;
   margin-left: auto;
   margin-right: auto;
@@ -153,7 +153,7 @@ export default {
   z-index: 2;
   padding: 5px;
   background: #f8f8f8;
-  border: #43cd66 dashed 2px;
+  border: var(--verde) dashed 2px;
   border-radius: 50%;
   overflow: hidden;
   margin-left: auto;
@@ -178,7 +178,7 @@ export default {
   z-index: 3;
   padding: 5px;
   background: #f8f8f8;
-  border: #2aaae2 dashed 2px;
+  border: var(--azul) dashed 2px;
   border-radius: 50%;
   overflow: hidden;
   margin-left: auto;
@@ -225,7 +225,7 @@ export default {
   margin-bottom: 9%;
   display: flex;
   flex-direction: column;
-  color: #033b62;
+  color: var(--titulo);
   font-weight: 400;
   font-size: 16px;
   position: relative;

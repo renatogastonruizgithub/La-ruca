@@ -147,19 +147,19 @@ export default {
 }
 
 #color1 {
-  background-color: #2aaae2;
+  background-color: var(--azul);
 }
 
 #color4 {
-  background-color: #75da8f;
+  background-color: var(--verde);
 }
 
 #color2 {
-  background-color: #f9b001;
+  background-color: var(--naranja);
 }
 
 #color3 {
-  background-color: #f86a9a;
+  background-color: var(--rosa);
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {

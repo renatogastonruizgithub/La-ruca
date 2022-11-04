@@ -86,19 +86,23 @@ export default {
   width: 100%;
   height: 100%;
   background: -moz-linear-gradient(
-    0deg,
-    rgba(34, 193, 195, 0.7) 0%,
-    rgba(253, 187, 45, 0.87) 100%
+    0deg, 
+    rgba(252, 232, 243, 0.7) 0%,
+    rgba(173,
+      132,
+      166, 0.87) 100%
   );
   background: -webkit-linear-gradient(
     0deg,
-    rgba(34, 193, 195, 0.7) 0%,
-    rgba(253, 187, 45, 0.87) 100%
+    rgba(252,232,243, 0.7) 0%,
+    rgba(173,
+      132,
+      166, 0.87) 100%
   );
   background: linear-gradient(
     0deg,
-    rgba(34, 192, 195, 0.7) 0%,
-    rgba(249, 175, 1, 0.87) 100%
+    rgba(252,232,243, 0.7) 0%,
+    rgba(173,132,166, 0.87) 100%
   );
 }
 

@@ -84,11 +84,16 @@ h1 {
 }
 
 :root {
-  --naranja: #f9b001;
+  /* --naranja: #74789d;
   --verde: #75da8f;
   --azul: #2aaae2;
-  --rosa: #f86a9a;
-  --titulo: #033b62;
+  --rosa: #fce8f3;
+  --titulo: #4b1e35; */
+    --naranja: #74789d;
+    --verde: #99d8a9;
+    --azul: #85c6e2;
+    --rosa: #fce8f3;
+    --titulo: #4b1e35;
 }
 
 .nosotros {

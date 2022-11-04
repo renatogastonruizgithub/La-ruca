@@ -1,6 +1,6 @@
 <template>
   <div class="fondoFooter">
-    <div :style="fondoFooter" class="imgFooter"></div>
+    <div :style="fondoFooter"  class="imgFooter"></div>
     <section class="container-fluid dividerfooer">
       <div class="row">
         <div
@@ -183,7 +183,7 @@ export default {
 </script>
 <style>
 .fondoFooter {
-  background-color: rgb(224, 233, 240);
+  background-color: #fce8f3;
 }
 .footers {
   position: relative;
@@ -213,7 +213,7 @@ export default {
   display: flex;
   flex-grow: 1;
   align-items: center;
-  color: #263c8d;
+  color: #4b1e35;
   cursor: pointer;
   position: relative;
 }

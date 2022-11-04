@@ -221,10 +221,16 @@ export default {
   z-index: 1;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 100%; 
   height: 100%;
   background: rgb(227,221,14);
-background: linear-gradient(150deg, rgba(227,221,14,1) 0%, rgba(231,139,33,0.5886729691876751) 49%, rgba(227,59,136,0.7175245098039216) 100%);
+background: linear-gradient(150deg, rgba(173,
+  132,
+  166,1) 0%, rgba(252,
+    232,
+    243,0.5886729691876751) 49%, rgba(75,
+  30,
+  53,0.7175245098039216) 100%);
 }
 .conten-inscripciones-titulo {
   position: absolute;
