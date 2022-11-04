@@ -35,7 +35,7 @@ export default {
       claseBtn2: "btnSecundario",
       images: [
         {
-          h1: "Jardin impulso waldorf",
+          h1: "centro educativo para la infancia",
           h2:
             "Experiencias artísticas, musicales, teatrales, circenses, plásticas y yoga ",
           url: "/",
